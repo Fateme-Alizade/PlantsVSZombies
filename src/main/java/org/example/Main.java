@@ -12,8 +12,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        scene = new Scene(loadFXML("Welcome"), 900, 700);
+        scene = new Scene(loadFXML("Welcome"), 1000, 700);
+        scene.getStylesheets().add(getClass().getResource("/css/Style.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.setTitle("Welcome");
         stage.show();
     }

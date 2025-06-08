@@ -11,12 +11,17 @@
             fx:controller="org.example.WelcomeController"
             prefHeight="400.0" prefWidth="600.0">
 
+
     <HBox alignment="CENTER"
           AnchorPane.topAnchor="0.0"
           AnchorPane.bottomAnchor="0.0"
           AnchorPane.leftAnchor="0.0"
           AnchorPane.rightAnchor="0.0">
-        <Button text="START GAME"/>
+
+        <Button text="START GAME"
+                styleClass="button1"
+                onAction="#switchToLevel1"
+        />
     </HBox>
 
 </AnchorPane>
