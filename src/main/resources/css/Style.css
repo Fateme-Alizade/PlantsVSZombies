@@ -1,8 +1,8 @@
 .button1 {
     -fx-background-color: #3498db;
     -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-padding: 10 20;
+    -fx-font-size: 40px;
+    -fx-padding: 50 100;
     -fx-background-radius: 10;
     -fx-border-color: #2980b9;
     -fx-border-width: 2;
@@ -14,9 +14,54 @@
     -fx-background-size: cover;
     -fx-background-position: center center;
 }
-.gridPane{
+.cell{
     -fx-border-color: Black;
-    -fx-border-width: 2px;
-    -fx-border-radius: 0;
-    -fx-background-radius: 0;
+    -fx-border-width: 1px;
+    -fx-background-color: transparent;
+}
+.navbar{
+    -fx-background-color: rgba(255,255,255,0.4);
+    -fx-padding: 5px;
+}
+.nav-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: #773b02;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+.nav-button:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+.nav-button:selected {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.toggle-button:selected:hover {
+    -fx-background-color: #43A047;
+}
+.cover{
+    -fx-background-color: rgba(255,255,255,0.4);
+    -fx-padding: 5px;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+.cover-button{
+    -fx-background-color: transparent;
+    -fx-padding: 50;
+    -fx-background-radius: 10;
+    -fx-border-color: #35ac0e;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+.cover-button:selected{
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
 }

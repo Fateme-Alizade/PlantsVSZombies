@@ -9,6 +9,6 @@ import java.io.IOException;
 public class WelcomeController {
     @FXML
     private void switchToLevel1() throws IOException {
-        Main.setRoot("Level1");
+        Main.setRoot("PlantsList1");
     }
 }

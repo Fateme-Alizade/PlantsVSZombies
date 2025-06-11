@@ -12,7 +12,7 @@ public class Main extends Application {
 //hi2
     @Override
     public void start(Stage stage) throws Exception {
-        scene = new Scene(loadFXML("Welcome"), 1000, 700);
+        scene = new Scene(loadFXML("Welcome"), 1500, 1000);
         scene.getStylesheets().add(getClass().getResource("/css/Style.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);

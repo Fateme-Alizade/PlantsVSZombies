@@ -5,16 +5,39 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.image.ImageView?>
 <AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.Level1Controller" prefHeight="400.0" prefWidth="600.0" styleClass="anchor">
-    <HBox alignment="CENTER" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-        <StackPane>
-            <GridPane alignment="CENTER" fx:id="gridPane" >
-            </GridPane>
-        </StackPane>
-    </HBox>
+    <BorderPane>
+        <top>
+            <ToolBar styleClass="navbar">
+                <HBox>
+                    <ToggleButton styleClass="nav-button"  fx:id="toggleButton1">
+                        <graphic>
+                            <ImageView fx:id="cardimage1" fitHeight="140"  fitWidth="140" preserveRatio="true">
+                            </ImageView>
+                        </graphic>
+                    </ToggleButton>
+                    <ToggleButton styleClass="nav-button"  fx:id="toggleButton2">
+                        <graphic>
+                            <ImageView fx:id="cardimage2" fitHeight="140"  fitWidth="140" preserveRatio="true">
+                            </ImageView>
+                        </graphic>
+                    </ToggleButton>
 
+                    <Button styleClass="nav-button"/>
+                    <Button styleClass="nav-button"/>
+                    <Button styleClass="nav-button"/>
+                    <Button styleClass="nav-button"/>
+                    <Button styleClass="nav-button"/>
+                    <Button styleClass="nav-button"/>
+                </HBox>
+            </ToolBar>
+        </top>
+    </BorderPane>
+    <VBox alignment="CENTER" AnchorPane.topAnchor="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-150.0" AnchorPane.rightAnchor="0.0">
+        <GridPane alignment="CENTER" fx:id="gridPane">
+        </GridPane>
+    </VBox>
 
 
 </AnchorPane>
