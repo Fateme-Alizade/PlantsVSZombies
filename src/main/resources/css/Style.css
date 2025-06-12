@@ -1,12 +1,23 @@
 .button1 {
-    -fx-background-color: #3498db;
-    -fx-text-fill: white;
+    -fx-background-color: #95959e;
+    -fx-text-fill: #2c3e50;
     -fx-font-size: 40px;
     -fx-padding: 50 100;
     -fx-background-radius: 10;
-    -fx-border-color: #2980b9;
+    -fx-border-color: #798183;
     -fx-border-width: 2;
     -fx-border-radius: 10;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.3, 2, 4);
+    
+}
+
+
+.menu{
+    -fx-background-image: url("../images/MainMenu.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
 }
 .anchor {
     -fx-background-image: url("../images/background.jpg");

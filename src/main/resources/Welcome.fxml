@@ -6,21 +6,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.WelcomeController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.WelcomeController"
+            prefHeight="400.0" prefWidth="600.0" styleClass="menu">
 
 
     <HBox alignment="CENTER"
           AnchorPane.topAnchor="0.0"
           AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0"
+          AnchorPane.leftAnchor="550.0"
           AnchorPane.rightAnchor="0.0">
 
         <Button text="START GAME"
                 styleClass="button1"
-                onAction="#switchToLevel1"
+                onAction="#switchToLevel1" prefHeight="0" prefWidth="450"
         />
     </HBox>
 
