@@ -9,7 +9,6 @@ import java.io.IOException;
 
 public class Main extends Application {
     private static Scene scene;
-//hi2
     @Override
     public void start(Stage stage) throws Exception {
         scene = new Scene(loadFXML("Welcome"), 1500, 1000);

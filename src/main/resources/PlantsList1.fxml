@@ -6,6 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.example.PlantsList1Controller"
@@ -13,19 +14,59 @@
             styleClass="anchor">
     <VBox styleClass="navbar" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" spacing="50">
         <HBox alignment="CENTER" spacing="50">
-            <ToggleButton styleClass="cover-button" fx:id="toggle0"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle1"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle2"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle3"></ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle0">
+                <graphic>
+                    <ImageView fx:id="peashooter" fitHeight="200" fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle1">
+                <graphic>
+                    <ImageView fx:id="repeater" fitHeight="200" fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle2">
+                <graphic>
+                    <ImageView fx:id="snowPea" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle3">
+                <graphic>
+                    <ImageView fx:id="wallNut" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
         </HBox>
         <HBox alignment="CENTER" spacing="50">
-            <ToggleButton styleClass="cover-button" fx:id="toggle4"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle5"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle6"></ToggleButton>
-            <ToggleButton styleClass="cover-button" fx:id="toggle7"></ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle4">
+                <graphic>
+                    <ImageView fx:id="tallNut" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle5">
+                <graphic>
+                    <ImageView fx:id="cherryBomb" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle6">
+                <graphic>
+                    <ImageView fx:id="jalapeno" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton styleClass="cover-button" fx:id="toggle7">
+                <graphic>
+                    <ImageView fx:id="sunflower" fitHeight="200"  fitWidth="200" preserveRatio="true">
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
         </HBox>
 
-        <Button text="Go To Way!" styleClass="cover-button"/>
+        <Button text="Go To Way!" styleClass="cover-button" onAction="#switchToLevel1"/>
     </VBox>
 
 </AnchorPane>

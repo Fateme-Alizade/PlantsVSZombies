@@ -53,7 +53,6 @@
 }
 .cover-button{
     -fx-background-color: transparent;
-    -fx-padding: 50;
     -fx-background-radius: 10;
     -fx-border-color: #35ac0e;
     -fx-border-width: 2;
