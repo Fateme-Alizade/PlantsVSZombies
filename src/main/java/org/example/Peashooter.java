@@ -11,7 +11,6 @@ import java.util.List;
 
 public class Peashooter extends PeaPlants{
     public static ImageView getCardImage;
-    private final  ImageView card = new ImageView(new Image("/images/Peashooter/card.png"));
     private ImageView imageView;
     private List<Image> frames;
     private Timeline timeline;
@@ -30,17 +29,17 @@ public class Peashooter extends PeaPlants{
 
     public void getImage() {
         for (int i = 0; i <= 12; i++) {
-            Image image = new Image(getClass().getResourceAsStream("/images/Peashooter_" + i + ".png"));
+            Image image = new Image(getClass().getResourceAsStream("/images/Peashooter/Peashooter_" + i + ".png"));
             frames.add(image);
-            imageView.setImage(frames.get(0));
-            imageView.setFitWidth(60);
-            imageView.setFitHeight(60);
-            timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
-                frameIndex = (frameIndex + 1) % frames.size();
-                imageView.setImage(frames.get(frameIndex));
-            }));
-            timeline.setCycleCount(Timeline.INDEFINITE);
         }
+        imageView.setImage(frames.get(0));
+        imageView.setFitWidth(60);
+        imageView.setFitHeight(60);
+        timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
+            frameIndex = (frameIndex + 1) % frames.size();
+            imageView.setImage(frames.get(frameIndex));
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
     }
     public void playAnimation() {
         timeline.play();
@@ -54,7 +53,4 @@ public class Peashooter extends PeaPlants{
         return imageView;
     }
 
-    public ImageView getCardImage() {
-        return card;
-    }
 }
