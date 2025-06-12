@@ -26,6 +26,7 @@ public class Level1Controller {
     @FXML private ToggleButton toggleButton3;
     @FXML private ToggleButton toggleButton4;
     @FXML private ToggleButton toggleButton5;
+    public int currentPlant;
 
     @FXML
     private void initialize() {
@@ -34,6 +35,11 @@ public class Level1Controller {
                 Button button = new Button();
                 button.getStyleClass().add("cell");
                 button.setPrefSize(85, 105);
+                button.setOnAction(even -> {
+                    if(currentPlant != -1){
+                        Planting.planting(button,currentPlant);
+                    }
+                });
                 gridPane.add(button, col, row);
             }
         }
@@ -89,6 +95,11 @@ public class Level1Controller {
         toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue!=null){
                 ToggleButton selectedToggleButton = (ToggleButton) newValue;
+                String id = selectedToggleButton.getId();
+                String[] parts = id.split("\\D+");
+                String numberStr = parts[1];
+                int number= Integer.parseInt(numberStr);
+                currentPlant=PlantsList1Controller.plants.get(number);
             }
         });
     }
