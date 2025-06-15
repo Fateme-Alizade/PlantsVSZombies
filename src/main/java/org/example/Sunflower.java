@@ -70,7 +70,7 @@ public class Sunflower extends AnotherPlants {
             anchorPane.getChildren().add(sun.getImageView());
 
             TranslateTransition fall = new TranslateTransition(Duration.seconds(2), sun.getImageView());
-            fall.setToY(y-268);
+            fall.setToY(y-260);
             fall.play();
 
             sun.getImageView().setOnMouseClicked(event -> {
