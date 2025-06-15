@@ -28,8 +28,8 @@ public class Sun {
             frames.add(image);
         }
         imageView.setImage(frames.get(0));
-        imageView.setFitWidth(60);
-        imageView.setFitHeight(60);
+        imageView.setFitWidth(48);
+        imageView.setFitHeight(48);
         timeline = new Timeline(new KeyFrame(Duration.millis(100), e -> {
             frameIndex = (frameIndex + 1) % frames.size();
             imageView.setImage(frames.get(frameIndex));
