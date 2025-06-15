@@ -2,8 +2,10 @@ package org.example;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
@@ -15,16 +17,24 @@ public class Peashooter extends PeaPlants{
     private List<Image> frames;
     private Timeline timeline;
     private int frameIndex = 0;
+    private AnchorPane anchorPane;
+    private double x,y;
 
-    public Peashooter() {
+
+    public Peashooter(AnchorPane anchorPane,double x,double y) {
         super(4, 7.5, 100);
         imageView = new ImageView();
         frames = new ArrayList<>();
         getImage();
+        this.anchorPane = anchorPane;
+        this.x = x;
+        this.y = y;
     }
 
     @Override
     void shooting() {
+        Bullet bullet = new Bullet(x-120,y+230,anchorPane);
+        bullet.play();
     }
 
     public void getImage() {

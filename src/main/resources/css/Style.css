@@ -9,9 +9,7 @@
     -fx-border-radius: 10;
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.3, 2, 4);
-    
 }
-
 
 .menu{
     -fx-background-image: url("../images/MainMenu.jpg");
@@ -74,4 +72,8 @@
     -fx-background-color: #4CAF50;
     -fx-text-fill: white;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+.sunPrice {
+    -fx-padding: 50;
+    -fx-font-size: 20;
 }

@@ -1,12 +1,17 @@
 package org.example;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +31,11 @@ public class Level1Controller {
     @FXML private ToggleButton toggleButton3;
     @FXML private ToggleButton toggleButton4;
     @FXML private ToggleButton toggleButton5;
-    public int currentPlant;
+    @FXML public AnchorPane anchorPane;
+    @FXML private Label label;
+    public int currentPlant=-1;
+    public static int score;
+
 
     @FXML
     private void initialize() {
@@ -37,7 +46,7 @@ public class Level1Controller {
                 button.setPrefSize(85, 105);
                 button.setOnAction(even -> {
                     if(currentPlant != -1){
-                        Planting.planting(button,currentPlant);
+                        Planting.planting(button,currentPlant,anchorPane);
                     }
                 });
                 gridPane.add(button, col, row);
@@ -45,6 +54,14 @@ public class Level1Controller {
         }
         setUpToggleButtons();
         selectToggleButtons();
+        SunManager sunManager = new SunManager(anchorPane);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(200), e -> addScore()));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+
+    public void addScore() {
+        label.setText(String.valueOf(score));
     }
 
     private void setUpToggleButtons() {
@@ -101,6 +118,7 @@ public class Level1Controller {
                 int number= Integer.parseInt(numberStr);
                 currentPlant=PlantsList1Controller.plants.get(number);
             }
+            else currentPlant=-1;
         });
     }
 }

@@ -4,16 +4,25 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
 public class Sunflower extends AnotherPlants{
-    public Sunflower() {
+
+    private AnchorPane anchorPane;
+    private double x,y;
+
+    public Sunflower(AnchorPane anchorPane, double x, double y) {
         super(4, 7.5, 100);
         imageView = new ImageView();
         frames = new ArrayList<>();
-        getImage();    }
+        getImage();
+        this.anchorPane = anchorPane;
+        this.x = x;
+        this.y = y;
+    }
 
     public static ImageView getCardImage;
         private ImageView imageView;
@@ -48,4 +57,8 @@ public class Sunflower extends AnotherPlants{
             return imageView;
         }
 
+
+        public void dropping(){
+            SunManager sunManager = new SunManager(anchorPane, x, y);
+        }
     }
